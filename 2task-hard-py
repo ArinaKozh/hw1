@@ -1,0 +1,19 @@
+'''
+ Найдите сумму цифр любого вещественного или целого числа. Можно использовать decimal. Через строку решать нельзя.
+'''
+from decimal import Decimal
+
+n = Decimal(input('Введите число\n'))
+
+snd = n%1
+
+result = 0
+while n>0:
+    result += int(n%10)
+    n = n//10 
+while snd!=0:
+    result+=int(snd*10)
+    snd = (snd*10)%1
+
+print(result)
+
